@@ -2,17 +2,21 @@ package com.driver;
 
 public class F1 extends Car {
 
-
+    private boolean isManual;
     public F1(String name, boolean isManual) {
         //Use arbitrary values for parameters which are not mentioned
-        super("mercedes",4,2,6,false,"Race car",1);
-
+        super(name,4,2,6,isManual,"Race car",1);
+        this.isManual = isManual;
     }
 
     // Getters for F1 class
     @Override
     public String getName() {
         return super.getName();
+    }
+
+    public boolean isManual() {
+        return isManual;
     }
 
     public int getCurrentGear() {
